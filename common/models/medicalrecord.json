@@ -1,0 +1,44 @@
+{
+  "name": "Medicalrecord",
+  "plural": "Medicalrecords",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nameOfDisease": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfIndetified": {
+      "type": "date",
+      "required": true
+    },
+    "bloodType": {
+      "type": "string",
+      "required": true
+    },
+    "medicalTreatmentFee": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

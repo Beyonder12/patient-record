@@ -1,0 +1,33 @@
+{
+  "name": "Hospital",
+  "plural": "Hospitals",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "medicalrecords": {
+      "type": "hasMany",
+      "model": "Medicalrecord",
+      "foreignKey": ""
+    },
+    "patients": {
+      "type": "hasMany",
+      "model": "Patient",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
