@@ -7,7 +7,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "nameef": {
       "type": "string",
       "required": true
     },
